@@ -4,6 +4,13 @@
 
 @custom-variant dark (&:is(.dark *));
 
+html {
+  font-size: 110%;
+  /* Increase base font size by 20% */
+  /* Alternatively, if your base is 16px: */
+  /* font-size: 19.2px; /* 16px * 1.2 = 19.2px */
+}
+
 body {
   @apply m-0;
   font-family:
@@ -132,6 +139,7 @@ code {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
