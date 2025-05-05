@@ -16,6 +16,8 @@ import {
   TableRow,
 } from "@/components/ui/table"
 import { Button } from "@/components/ui/button"
+import { useState } from "react"
+import { cn } from "@/lib/utils"
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
@@ -28,7 +30,7 @@ export function DataTable<TData, TValue>({
   data,
   isPaginated
 }: DataTableProps<TData, TValue>) {
-
+  const [rowSelection, setRowSelection] = useState({})
   const paginatedRowModel = isPaginated ? getPaginationRowModel() : undefined
 
   const table = useReactTable({
@@ -36,10 +38,14 @@ export function DataTable<TData, TValue>({
     columns,
     getCoreRowModel: getCoreRowModel(),
     getPaginationRowModel: paginatedRowModel,
+    onRowSelectionChange: setRowSelection,
     initialState: {
       pagination: isPaginated ? {
         pageSize: 50
-      } : undefined
+      } : undefined,
+    },
+    state: {
+      rowSelection,
     }
   })
 
@@ -89,6 +95,7 @@ export function DataTable<TData, TValue>({
                 <TableRow
                   key={row.id}
                   data-state={row.getIsSelected() && "selected"}
+                  className={cn(row.getIsSelected() ? "!bg-green-500/10" : "")}
                 >
                   {row.getVisibleCells().map((cell) => (
                     <TableCell key={cell.id}>

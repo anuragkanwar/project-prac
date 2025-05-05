@@ -20,10 +20,10 @@ export interface Problem {
    * @see Difficulty
    */
   concept_difficulty: Difficulty;
-    /**
-   * The code difficulty level of the problem.
-   * @see Difficulty
-   */
+  /**
+ * The code difficulty level of the problem.
+ * @see Difficulty
+ */
   code_difficulty: Difficulty;
   /**
    * The category or topic the problem belongs to.
