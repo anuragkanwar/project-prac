@@ -18,20 +18,19 @@ import {
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
 import { cn } from "@/lib/utils"
-import { UserProblemData } from "@/types/storage"
 import { CombinedProblem } from "@/types/storage"
 
-interface DataTableProps<TData, TValue> {
+interface DataTableProps<TValue> {
   columns: ColumnDef<CombinedProblem, TValue>[]
   data: CombinedProblem[]
   isPaginated: boolean
 }
 
-export function DataTable<TData, TValue>({
+export function DataTable<TValue>({
   columns,
   data,
   isPaginated
-}: DataTableProps<TData, TValue>) {
+}: DataTableProps<TValue>) {
   const [rowSelection, setRowSelection] = useState(() => {
     let rp: Record<string, boolean> = {};
     data.forEach((x) => {

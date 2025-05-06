@@ -1,8 +1,6 @@
-import { Problems } from "@/data/problems"
 import { Category } from "@/types/problem"
 import { CombinedProblem } from "@/types/storage"
 import { ColumnDef } from "@tanstack/react-table"
-import { useMemo } from "react"
 import { DataTable } from "./commonTable/commonTableView"
 import {
   Accordion,

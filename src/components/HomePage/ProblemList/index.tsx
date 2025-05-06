@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { useCallback, useEffect, useMemo, useState } from "react"
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { ProblemsGroupView } from "./groupView";
 import { ProblemsListView } from "./listView";
 import { Group, List, Shuffle, Star } from "lucide-react";
@@ -8,7 +8,7 @@ import { CombinedProblem, UserProgressStorage } from "@/types/storage";
 import { Problems } from "@/data/problems";
 import { Category } from "@/types/problem";
 import { Badge, BadgeVariantType } from "@/components/ui/badge";
-import { createColumnHelper } from "@tanstack/react-table";
+import { ColumnDef, createColumnHelper } from "@tanstack/react-table";
 import { Link } from "@tanstack/react-router";
 import { Checkbox } from "@/components/ui/checkbox";
 
@@ -160,7 +160,7 @@ export const ProblemList = () => {
         </div>
       </div>
       <div className="w-4/5">
-        {groupView ? <ProblemsGroupView columns={columns} data={groupedData} /> : <ProblemsListView columns={columns} data={combinedData} />}
+        {groupView ? <ProblemsGroupView columns={columns as ColumnDef<CombinedProblem>[]} data={groupedData} /> : <ProblemsListView columns={columns as ColumnDef<CombinedProblem>[]} data={combinedData} />}
       </div>
     </div>
   )
