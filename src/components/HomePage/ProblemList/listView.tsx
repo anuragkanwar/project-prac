@@ -1,13 +1,16 @@
-import { Problems } from "@/data/problems"
 import { DataTable } from "./commonTable/commonTableView"
-import { Columns } from "./commonTable/columns"
 import type { ColumnDef } from "@tanstack/react-table"
-import type { Problem } from "@/types/problem"
+import { CombinedProblem } from "@/types/storage"
 
-export const ProblemsListView = () => {
+interface ProblemsListViewType {
+  data: CombinedProblem[]
+  columns: ColumnDef<CombinedProblem>[]
+}
+
+export const ProblemsListView: React.FC<ProblemsListViewType> = ({ columns, data }) => {
   return (
     <div className="w-full flex flex-col items-center justify-center gap-2 overflow-hidden">
-      <DataTable isPaginated={true} data={Problems} columns={Columns as ColumnDef<Problem>[]} />
+      <DataTable isPaginated={true} data={data} columns={columns} />
     </div>
   )
 }

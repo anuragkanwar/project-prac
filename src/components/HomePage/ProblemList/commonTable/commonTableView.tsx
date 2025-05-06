@@ -18,10 +18,12 @@ import {
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
 import { cn } from "@/lib/utils"
+import { UserProblemData } from "@/types/storage"
+import { CombinedProblem } from "@/types/storage"
 
 interface DataTableProps<TData, TValue> {
-  columns: ColumnDef<TData, TValue>[]
-  data: TData[]
+  columns: ColumnDef<CombinedProblem, TValue>[]
+  data: CombinedProblem[]
   isPaginated: boolean
 }
 
@@ -30,12 +32,19 @@ export function DataTable<TData, TValue>({
   data,
   isPaginated
 }: DataTableProps<TData, TValue>) {
-  const [rowSelection, setRowSelection] = useState({})
+  const [rowSelection, setRowSelection] = useState(() => {
+    let rp: Record<string, boolean> = {};
+    data.forEach((x) => {
+      rp[x.id] = x.done;
+    })
+    return rp;
+  })
   const paginatedRowModel = isPaginated ? getPaginationRowModel() : undefined
 
   const table = useReactTable({
     data,
     columns,
+    getRowId: originalRow => originalRow.id,
     getCoreRowModel: getCoreRowModel(),
     getPaginationRowModel: paginatedRowModel,
     onRowSelectionChange: setRowSelection,
