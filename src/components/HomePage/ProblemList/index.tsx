@@ -12,8 +12,6 @@ import { ColumnDef, createColumnHelper } from "@tanstack/react-table";
 import { Link } from "@tanstack/react-router";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ChartConfig, ChartContainer, ChartLegend, ChartLegendContent, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
-import { Bar, BarChart, CartesianGrid, XAxis } from "recharts"
 const columnHelper = createColumnHelper<CombinedProblem>()
 
 export const ProblemList = () => {
@@ -90,12 +88,12 @@ export const ProblemList = () => {
       const d = problem.concept_difficulty
       return {
         ...acc,
-        // [d]: { total: acc[d].total + 1, solved: acc[d].solved + (problem.done ? 1 : 0) }
+        [d]: { total: acc[d].total + 1, solved: acc[d].solved + (problem.done ? 1 : 0) }
       }
     }, {
-      [Difficulty.Easy]: { total: 100, solved: 60 },
-      [Difficulty.Medium]: { total: 200, solved: 130 },
-      [Difficulty.Hard]: { total: 240, solved: 120 },
+      [Difficulty.Easy]: { total: 0, solved: 0 },
+      [Difficulty.Medium]: { total: 0, solved: 0 },
+      [Difficulty.Hard]: { total: 0, solved: 0 },
     })
   }, [combinedData])
 
@@ -185,7 +183,13 @@ export const ProblemList = () => {
             <CardTitle>Solved Analytics</CardTitle>
             <CardContent>
               <div>
-                <span>combinedData</span>
+                <span>Easy : {analyticsData.Easy.solved} / {analyticsData.Easy.total}</span>
+              </div>
+              <div>
+                <span>Medium : {analyticsData.Medium.solved} / {analyticsData.Medium.total}</span>
+              </div>
+              <div>
+                <span>Hard : {analyticsData.Hard.solved} / {analyticsData.Hard.total}</span>
               </div>
             </CardContent>
           </CardHeader>
