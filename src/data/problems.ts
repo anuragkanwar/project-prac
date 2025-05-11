@@ -2,6 +2,256 @@ import { Category, Difficulty, type Problem } from "@/types/problem";
 
 export const Problems: Problem[] = [
   {
+    "id": "single-number",
+    "title": "Single Number",
+    "concept_difficulty": Difficulty.Easy,
+    "code_difficulty": Difficulty.Easy,
+    "category": Category.BitWizardry,
+    "url": "https://leetcode.com/problems/single-number/"
+  },
+  {
+    "id": "single-number-iii",
+    "title": "Single Number III",
+    "concept_difficulty": Difficulty.Medium,
+    "code_difficulty": Difficulty.Easy,
+
+    "category": Category.BitWizardry,
+    "url": "https://leetcode.com/problems/single-number-iii/"
+  },
+  {
+    "id": "number-of-1-bits",
+    "title": "Number of 1 Bits",
+    "concept_difficulty": Difficulty.Easy,
+    "code_difficulty": Difficulty.Easy,
+    "category": Category.BitWizardry,
+    "url": "https://leetcode.com/problems/number-of-1-bits/"
+  },
+  {
+    "id": "counting-bits",
+    "title": "Counting Bits",
+    "concept_difficulty": Difficulty.Easy,
+    "code_difficulty": Difficulty.Easy,
+    "category": Category.BitWizardry,
+    "url": "https://leetcode.com/problems/counting-bits/"
+  },
+  {
+    "id": "add-binary",
+    "title": "Add Binary",
+    "concept_difficulty": Difficulty.Easy,
+    "code_difficulty": Difficulty.Easy,
+    "category": Category.BitWizardry,
+    "url": "https://leetcode.com/problems/add-binary/"
+  },
+  {
+    "id": "minimum-bit-flips-to-convert-number",
+    "title": "Minimum Bit Flips to Convert Number",
+    "concept_difficulty": Difficulty.Easy,
+    "code_difficulty": Difficulty.Easy,
+    "category": Category.BitWizardry,
+    "url": "https://leetcode.com/problems/minimum-bit-flips-to-convert-number/"
+  },
+  {
+    "id": "reverse-bits",
+    "title": "Reverse Bits",
+    "concept_difficulty": Difficulty.Easy,
+    "code_difficulty": Difficulty.Easy,
+    "category": Category.BitWizardry,
+    "url": "https://leetcode.com/problems/reverse-bits/"
+  },
+  {
+    "id": "missing-number",
+    "title": "Missing Number",
+    "concept_difficulty": Difficulty.Easy,
+    "code_difficulty": Difficulty.Easy,
+    "category": Category.BitWizardry,
+    "url": "https://leetcode.com/problems/missing-number/"
+  },
+  {
+    "id": "shuffle-the-array",
+    "title": "Shuffle the Array",
+    "concept_difficulty": Difficulty.Easy,
+    "code_difficulty": Difficulty.Easy,
+    "category": Category.BitWizardry,
+    "url": "https://leetcode.com/problems/shuffle-the-array/"
+  },
+  {
+    "id": "add-to-array-form-of-integer",
+    "title": "Add to Array-Form of Integer",
+    "concept_difficulty": Difficulty.Easy,
+    "code_difficulty": Difficulty.Easy,
+    "category": Category.BitWizardry,
+    "url": "https://leetcode.com/problems/add-to-array-form-of-integer/"
+  },
+  {
+    "id": "find-the-difference",
+    "title": "Find the Diffrence",
+    "concept_difficulty": Difficulty.Easy,
+    "code_difficulty": Difficulty.Easy,
+    "category": Category.BitWizardry,
+    "url": "https://leetcode.com/problems/find-the-difference"
+  },
+  {
+    "id": "power-of-two",
+    "title": "Power of Two",
+    "concept_difficulty": Difficulty.Easy,
+    "code_difficulty": Difficulty.Easy,
+    "category": Category.BitWizardry,
+    "url": "https://leetcode.com/problems/power-of-two"
+  },
+  {
+    "id": "sum-of-two-integers",
+    "title": "Sum of Two Integers",
+    "concept_difficulty": Difficulty.Medium,
+    "code_difficulty": Difficulty.Easy,
+
+    "category": Category.BitWizardry,
+    "url": "https://leetcode.com/problems/sum-of-two-integers/"
+  },
+  {
+    "id": "reverse-integer",
+    "title": "Reverse Integer",
+    "concept_difficulty": Difficulty.Medium,
+    "code_difficulty": Difficulty.Easy,
+
+    "category": Category.BitWizardry,
+    "url": "https://leetcode.com/problems/reverse-integer/"
+  },
+  {
+    "id": "bitwise-xor-of-all-pairings",
+    "title": "Bitwise XOR of All Pairings",
+    "concept_difficulty": Difficulty.Medium,
+    "code_difficulty": Difficulty.Easy,
+
+    "category": Category.BitWizardry,
+    "url": "https://leetcode.com/problems/bitwise-xor-of-all-pairings/"
+  },
+  {
+    "id": "largest-combination-with-bitwise-and-greater-than-zero",
+    "title": "Largest Combination With Bitwise AND Greater Than Zero",
+    "concept_difficulty": Difficulty.Medium,
+    "code_difficulty": Difficulty.Easy,
+
+    "category": Category.BitWizardry,
+    "url": "https://leetcode.com/problems/largest-combination-with-bitwise-and-greater-than-zero/"
+  },
+  {
+    "id": "xor-queries-of-a-subarray",
+    "title": "XOR Queries of a Subarray",
+    "concept_difficulty": Difficulty.Medium,
+    "code_difficulty": Difficulty.Easy,
+
+    "category": Category.BitWizardry,
+    "url": "https://leetcode.com/problems/xor-queries-of-a-subarray/"
+  },
+  {
+    "id": "maximum-xor-for-each-query",
+    "title": "Maximum XOR for Each Query",
+    "concept_difficulty": Difficulty.Medium,
+    "code_difficulty": Difficulty.Easy,
+
+    "category": Category.BitWizardry,
+    "url": "https://leetcode.com/problems/maximum-xor-for-each-query/"
+  },
+  {
+    "id": "neighboring-bitwise-xor",
+    "title": "Neighboring Bitwise XOR",
+    "concept_difficulty": Difficulty.Medium,
+    "code_difficulty": Difficulty.Easy,
+
+    "category": Category.BitWizardry,
+    "url": "https://leetcode.com/problems/neighboring-bitwise-xor/"
+  },
+  {
+    "id": "shortest-subarray-with-or-at-least-k-ii",
+    "title": "Shortest Subarray With OR at Least K II",
+    "concept_difficulty": Difficulty.Medium,
+    "code_difficulty": Difficulty.Easy,
+
+    "category": Category.BitWizardry,
+    "url": "https://leetcode.com/problems/shortest-subarray-with-or-at-least-k-ii/"
+  },
+  {
+    "id": "bitwise-and-of-numbers-range",
+    "title": "Bitwise AND of Numbers Range",
+    "concept_difficulty": Difficulty.Medium,
+    "code_difficulty": Difficulty.Easy,
+
+    "category": Category.BitWizardry,
+    "url": "https://leetcode.com/problems/bitwise-and-of-numbers-range"
+  },
+  {
+    "id": "find-kth-bit-in-nth-binary-string",
+    "title": "Find Kth Bit in Nth Binary String",
+    "concept_difficulty": Difficulty.Medium,
+    "code_difficulty": Difficulty.Easy,
+
+    "category": Category.BitWizardry,
+    "url": "https://leetcode.com/problems/find-kth-bit-in-nth-binary-string/"
+  },
+  {
+    "id": "count-triplets-that-can-form-two-arrays-of-equal-xor",
+    "title": "Count Triplets That Can Form Two Arrays of Equal XOR",
+    "concept_difficulty": Difficulty.Medium,
+    "code_difficulty": Difficulty.Easy,
+
+    "category": Category.BitWizardry,
+    "url": "https://leetcode.com/problems/count-triplets-that-can-form-two-arrays-of-equal-xor"
+  },
+  {
+    "id": "minimum-array-end",
+    "title": "Minimum Array End",
+    "concept_difficulty": Difficulty.Medium,
+    "code_difficulty": Difficulty.Easy,
+
+    "category": Category.BitWizardry,
+    "url": "https://leetcode.com/problems/minimum-array-end/"
+  },
+  {
+    "id": "find-if-array-can-be-sorted",
+    "title": "Find if Array Can Be Sorted",
+    "concept_difficulty": Difficulty.Medium,
+    "code_difficulty": Difficulty.Easy,
+
+    "category": Category.BitWizardry,
+    "url": "https://leetcode.com/problems/find-if-array-can-be-sorted/"
+  },
+  {
+    "id": "longest-subarray-with-maximum-bitwise-and",
+    "title": "Longest Subarray With Maximum Bitwise AND",
+    "concept_difficulty": Difficulty.Medium,
+    "code_difficulty": Difficulty.Easy,
+
+    "category": Category.BitWizardry,
+    "url": "https://leetcode.com/problems/longest-subarray-with-maximum-bitwise-and/"
+  },
+  {
+    "id": "longest-nice-subarray",
+    "title": "Longest Nice Subarray",
+    "concept_difficulty": Difficulty.Medium,
+    "code_difficulty": Difficulty.Easy,
+
+    "category": Category.BitWizardry,
+    "url": "https://leetcode.com/problems/longest-nice-subarray/"
+  },
+  {
+    "id": "find-the-longest-substring-containing-vowels-in-even-counts",
+    "title": "Find the Longest Substring Containing Vowels in Even Counts",
+    "concept_difficulty": Difficulty.Medium,
+    "code_difficulty": Difficulty.Easy,
+
+    "category": Category.BitWizardry,
+    "url": "https://leetcode.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/"
+  },
+  {
+    "id": "minimize-xor",
+    "title": "Minimize XOR",
+    "concept_difficulty": Difficulty.Medium,
+    "code_difficulty": Difficulty.Easy,
+
+    "category": Category.BitWizardry,
+    "url": "https://leetcode.com/problems/minimize-xor/"
+  },
+  {
     "id": "score-of-a-string",
     "title": "Score of a String",
     "concept_difficulty": Difficulty.Easy,
@@ -6474,255 +6724,5 @@ export const Problems: Problem[] = [
 
     "category": Category.MathsCountingArithmeticGeometric,
     "url": "https://leetcode.com/problems/integer-to-english-words/"
-  },
-  {
-    "id": "single-number",
-    "title": "Single Number",
-    "concept_difficulty": Difficulty.Easy,
-    "code_difficulty": Difficulty.Easy,
-    "category": Category.BitWizardry,
-    "url": "https://leetcode.com/problems/single-number/"
-  },
-  {
-    "id": "single-number-iii",
-    "title": "Single Number III",
-    "concept_difficulty": Difficulty.Medium,
-    "code_difficulty": Difficulty.Easy,
-
-    "category": Category.BitWizardry,
-    "url": "https://leetcode.com/problems/single-number-iii/"
-  },
-  {
-    "id": "number-of-1-bits",
-    "title": "Number of 1 Bits",
-    "concept_difficulty": Difficulty.Easy,
-    "code_difficulty": Difficulty.Easy,
-    "category": Category.BitWizardry,
-    "url": "https://leetcode.com/problems/number-of-1-bits/"
-  },
-  {
-    "id": "counting-bits",
-    "title": "Counting Bits",
-    "concept_difficulty": Difficulty.Easy,
-    "code_difficulty": Difficulty.Easy,
-    "category": Category.BitWizardry,
-    "url": "https://leetcode.com/problems/counting-bits/"
-  },
-  {
-    "id": "add-binary",
-    "title": "Add Binary",
-    "concept_difficulty": Difficulty.Easy,
-    "code_difficulty": Difficulty.Easy,
-    "category": Category.BitWizardry,
-    "url": "https://leetcode.com/problems/add-binary/"
-  },
-  {
-    "id": "minimum-bit-flips-to-convert-number",
-    "title": "Minimum Bit Flips to Convert Number",
-    "concept_difficulty": Difficulty.Easy,
-    "code_difficulty": Difficulty.Easy,
-    "category": Category.BitWizardry,
-    "url": "https://leetcode.com/problems/minimum-bit-flips-to-convert-number/"
-  },
-  {
-    "id": "reverse-bits",
-    "title": "Reverse Bits",
-    "concept_difficulty": Difficulty.Easy,
-    "code_difficulty": Difficulty.Easy,
-    "category": Category.BitWizardry,
-    "url": "https://leetcode.com/problems/reverse-bits/"
-  },
-  {
-    "id": "missing-number",
-    "title": "Missing Number",
-    "concept_difficulty": Difficulty.Easy,
-    "code_difficulty": Difficulty.Easy,
-    "category": Category.BitWizardry,
-    "url": "https://leetcode.com/problems/missing-number/"
-  },
-  {
-    "id": "shuffle-the-array",
-    "title": "Shuffle the Array",
-    "concept_difficulty": Difficulty.Easy,
-    "code_difficulty": Difficulty.Easy,
-    "category": Category.BitWizardry,
-    "url": "https://leetcode.com/problems/shuffle-the-array/"
-  },
-  {
-    "id": "add-to-array-form-of-integer",
-    "title": "Add to Array-Form of Integer",
-    "concept_difficulty": Difficulty.Easy,
-    "code_difficulty": Difficulty.Easy,
-    "category": Category.BitWizardry,
-    "url": "https://leetcode.com/problems/add-to-array-form-of-integer/"
-  },
-  {
-    "id": "find-the-difference",
-    "title": "Find the Diffrence",
-    "concept_difficulty": Difficulty.Easy,
-    "code_difficulty": Difficulty.Easy,
-    "category": Category.BitWizardry,
-    "url": "https://leetcode.com/problems/find-the-difference"
-  },
-  {
-    "id": "power-of-two",
-    "title": "Power of Two",
-    "concept_difficulty": Difficulty.Easy,
-    "code_difficulty": Difficulty.Easy,
-    "category": Category.BitWizardry,
-    "url": "https://leetcode.com/problems/power-of-two"
-  },
-  {
-    "id": "sum-of-two-integers",
-    "title": "Sum of Two Integers",
-    "concept_difficulty": Difficulty.Medium,
-    "code_difficulty": Difficulty.Easy,
-
-    "category": Category.BitWizardry,
-    "url": "https://leetcode.com/problems/sum-of-two-integers/"
-  },
-  {
-    "id": "reverse-integer",
-    "title": "Reverse Integer",
-    "concept_difficulty": Difficulty.Medium,
-    "code_difficulty": Difficulty.Easy,
-
-    "category": Category.BitWizardry,
-    "url": "https://leetcode.com/problems/reverse-integer/"
-  },
-  {
-    "id": "bitwise-xor-of-all-pairings",
-    "title": "Bitwise XOR of All Pairings",
-    "concept_difficulty": Difficulty.Medium,
-    "code_difficulty": Difficulty.Easy,
-
-    "category": Category.BitWizardry,
-    "url": "https://leetcode.com/problems/bitwise-xor-of-all-pairings/"
-  },
-  {
-    "id": "largest-combination-with-bitwise-and-greater-than-zero",
-    "title": "Largest Combination With Bitwise AND Greater Than Zero",
-    "concept_difficulty": Difficulty.Medium,
-    "code_difficulty": Difficulty.Easy,
-
-    "category": Category.BitWizardry,
-    "url": "https://leetcode.com/problems/largest-combination-with-bitwise-and-greater-than-zero/"
-  },
-  {
-    "id": "xor-queries-of-a-subarray",
-    "title": "XOR Queries of a Subarray",
-    "concept_difficulty": Difficulty.Medium,
-    "code_difficulty": Difficulty.Easy,
-
-    "category": Category.BitWizardry,
-    "url": "https://leetcode.com/problems/xor-queries-of-a-subarray/"
-  },
-  {
-    "id": "maximum-xor-for-each-query",
-    "title": "Maximum XOR for Each Query",
-    "concept_difficulty": Difficulty.Medium,
-    "code_difficulty": Difficulty.Easy,
-
-    "category": Category.BitWizardry,
-    "url": "https://leetcode.com/problems/maximum-xor-for-each-query/"
-  },
-  {
-    "id": "neighboring-bitwise-xor",
-    "title": "Neighboring Bitwise XOR",
-    "concept_difficulty": Difficulty.Medium,
-    "code_difficulty": Difficulty.Easy,
-
-    "category": Category.BitWizardry,
-    "url": "https://leetcode.com/problems/neighboring-bitwise-xor/"
-  },
-  {
-    "id": "shortest-subarray-with-or-at-least-k-ii",
-    "title": "Shortest Subarray With OR at Least K II",
-    "concept_difficulty": Difficulty.Medium,
-    "code_difficulty": Difficulty.Easy,
-
-    "category": Category.BitWizardry,
-    "url": "https://leetcode.com/problems/shortest-subarray-with-or-at-least-k-ii/"
-  },
-  {
-    "id": "bitwise-and-of-numbers-range",
-    "title": "Bitwise AND of Numbers Range",
-    "concept_difficulty": Difficulty.Medium,
-    "code_difficulty": Difficulty.Easy,
-
-    "category": Category.BitWizardry,
-    "url": "https://leetcode.com/problems/bitwise-and-of-numbers-range"
-  },
-  {
-    "id": "find-kth-bit-in-nth-binary-string",
-    "title": "Find Kth Bit in Nth Binary String",
-    "concept_difficulty": Difficulty.Medium,
-    "code_difficulty": Difficulty.Easy,
-
-    "category": Category.BitWizardry,
-    "url": "https://leetcode.com/problems/find-kth-bit-in-nth-binary-string/"
-  },
-  {
-    "id": "count-triplets-that-can-form-two-arrays-of-equal-xor",
-    "title": "Count Triplets That Can Form Two Arrays of Equal XOR",
-    "concept_difficulty": Difficulty.Medium,
-    "code_difficulty": Difficulty.Easy,
-
-    "category": Category.BitWizardry,
-    "url": "https://leetcode.com/problems/count-triplets-that-can-form-two-arrays-of-equal-xor"
-  },
-  {
-    "id": "minimum-array-end",
-    "title": "Minimum Array End",
-    "concept_difficulty": Difficulty.Medium,
-    "code_difficulty": Difficulty.Easy,
-
-    "category": Category.BitWizardry,
-    "url": "https://leetcode.com/problems/minimum-array-end/"
-  },
-  {
-    "id": "find-if-array-can-be-sorted",
-    "title": "Find if Array Can Be Sorted",
-    "concept_difficulty": Difficulty.Medium,
-    "code_difficulty": Difficulty.Easy,
-
-    "category": Category.BitWizardry,
-    "url": "https://leetcode.com/problems/find-if-array-can-be-sorted/"
-  },
-  {
-    "id": "longest-subarray-with-maximum-bitwise-and",
-    "title": "Longest Subarray With Maximum Bitwise AND",
-    "concept_difficulty": Difficulty.Medium,
-    "code_difficulty": Difficulty.Easy,
-
-    "category": Category.BitWizardry,
-    "url": "https://leetcode.com/problems/longest-subarray-with-maximum-bitwise-and/"
-  },
-  {
-    "id": "longest-nice-subarray",
-    "title": "Longest Nice Subarray",
-    "concept_difficulty": Difficulty.Medium,
-    "code_difficulty": Difficulty.Easy,
-
-    "category": Category.BitWizardry,
-    "url": "https://leetcode.com/problems/longest-nice-subarray/"
-  },
-  {
-    "id": "find-the-longest-substring-containing-vowels-in-even-counts",
-    "title": "Find the Longest Substring Containing Vowels in Even Counts",
-    "concept_difficulty": Difficulty.Medium,
-    "code_difficulty": Difficulty.Easy,
-
-    "category": Category.BitWizardry,
-    "url": "https://leetcode.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/"
-  },
-  {
-    "id": "minimize-xor",
-    "title": "Minimize XOR",
-    "concept_difficulty": Difficulty.Medium,
-    "code_difficulty": Difficulty.Easy,
-
-    "category": Category.BitWizardry,
-    "url": "https://leetcode.com/problems/minimize-xor/"
   },
 ]

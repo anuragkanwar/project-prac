@@ -6,12 +6,14 @@ import { Group, List, Shuffle, Star } from "lucide-react";
 import { loadUserProgress, saveUserProgress } from "@/lib/utils";
 import { CombinedProblem, UserProgressStorage } from "@/types/storage";
 import { Problems } from "@/data/problems";
-import { Category } from "@/types/problem";
+import { Category, Difficulty } from "@/types/problem";
 import { Badge, BadgeVariantType } from "@/components/ui/badge";
 import { ColumnDef, createColumnHelper } from "@tanstack/react-table";
 import { Link } from "@tanstack/react-router";
 import { Checkbox } from "@/components/ui/checkbox";
-
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ChartConfig, ChartContainer, ChartLegend, ChartLegendContent, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
+import { Bar, BarChart, CartesianGrid, XAxis } from "recharts"
 const columnHelper = createColumnHelper<CombinedProblem>()
 
 export const ProblemList = () => {
@@ -83,6 +85,19 @@ export const ProblemList = () => {
     }, {} as Record<Category, CombinedProblem[]>);
   }, [combinedData, groupView]);
 
+  const analyticsData: Record<Difficulty, { total: number, solved: number }> = useMemo(() => {
+    return combinedData.reduce((acc, problem) => {
+      const d = problem.concept_difficulty
+      return {
+        ...acc,
+        // [d]: { total: acc[d].total + 1, solved: acc[d].solved + (problem.done ? 1 : 0) }
+      }
+    }, {
+      [Difficulty.Easy]: { total: 100, solved: 60 },
+      [Difficulty.Medium]: { total: 200, solved: 130 },
+      [Difficulty.Hard]: { total: 240, solved: 120 },
+    })
+  }, [combinedData])
 
   const columns = [
 
@@ -149,18 +164,44 @@ export const ProblemList = () => {
     })
 
   ]
-  return (
-    <div className="w-full flex flex-col items-center justify-center gap-2 overflow-hidden">
 
-      <div className="w-4/5 flex flex-row justify-between items-center rounded-md bg-accent p-2">
-        <div></div>
-        <div className="flex flex-row items-center gap-2 ">
-          <Button size={"icon"} onClick={() => setGroupView((val) => !val)} >{groupView ? <Group /> : <List />}</Button>
-          <Button size={"icon"} > <Shuffle /> </Button>
-        </div>
+  // const chartConfig = {
+  //   desktop: {
+  //     label: "total",
+  //     color: "hsl(var(--chart-1))",
+  //   },
+  //   mobile: {
+  //     label: "solved",
+  //     color: "hsl(var(--chart-2))",
+  //   },
+  // } satisfies ChartConfig
+
+
+  return (
+    <div className="w-full flex flex-row items-start gap-8 overflow-hidden p-8">
+      <div className="w-1/5">
+        <Card>
+          <CardHeader>
+            <CardTitle>Solved Analytics</CardTitle>
+            <CardContent>
+              <div>
+                <span>combinedData</span>
+              </div>
+            </CardContent>
+          </CardHeader>
+        </Card>
       </div>
-      <div className="w-4/5">
-        {groupView ? <ProblemsGroupView columns={columns as ColumnDef<CombinedProblem>[]} data={groupedData} /> : <ProblemsListView columns={columns as ColumnDef<CombinedProblem>[]} data={combinedData} />}
+      <div className="w-3/5 flex-col items-center justify-center gap-2 overflow-hidden">
+        <div className="w-full flex flex-row justify-between items-center rounded-md bg-accent p-2">
+          <div></div>
+          <div className="flex flex-row items-center gap-2 ">
+            <Button size={"icon"} onClick={() => setGroupView((val) => !val)} >{groupView ? <Group /> : <List />}</Button>
+            <Button size={"icon"} > <Shuffle /> </Button>
+          </div>
+        </div>
+        <div className="w-full">
+          {groupView ? <ProblemsGroupView columns={columns as ColumnDef<CombinedProblem>[]} data={groupedData} /> : <ProblemsListView columns={columns as ColumnDef<CombinedProblem>[]} data={combinedData} />}
+        </div>
       </div>
     </div>
   )
